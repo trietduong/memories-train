@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skip Animation</title>
+    <style>
+        .imessage p {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out; /* Adjust the transition properties as needed */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="imessage">
+        <p>This is a message.</p>
+        <p>This is a message.</p>
+    </div>
+    
+    <button id="skipAnimationButton">Skip Animation</button>
+
+    <script>
+        document.getElementById('skipAnimationButton').addEventListener('click', function() {
+            var elements = document.querySelectorAll('.imessage p');
+            elements.forEach(function(element) {
+                element.style.transition = 'none';
+                element.style.opacity = '1';
+            });
+        });
+    </script>
+
+</body>
+</html>
