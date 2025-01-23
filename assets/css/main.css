@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Indie+Flower&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Leckerli+One&family=Roboto:wght@100;300;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+header{
+	border: 0;
+	margin: 10px 0% 0 0%;
+	padding: 0% 0% 0 0%;
+	justify-content: center;
+	display: flex;
+}
+header h1{
+	font-family: 'Homemade Apple', cursive;
+  	font-size: 2em;
+  	color: rgba(255, 255, 255, 1);
+}
+
+
+/*Video*/
+#backgroundVideo{
+	position:fixed;
+	width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    top:0;
+    left:0;
+}
+
+#wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.myButton {
+  background-color:#44c767;
+  cursor:pointer;
+  font-family: 'Homemade Apple', cursive;
+    font-size: 2em;
+    color: rgba(255, 255, 255, 1);
+  font-size:24px;
+  padding: 20px;
+  margin: auto;
+  background: inherit;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+    justify-content: center;
+  align-content: center;
+  border-radius: 40px;
+  float:right;
+}
+.myButton:hover {
+  background-color:rgba(255,255,255,0.3);
+}
+.myButton:active {
+  position:relative;
+  top:1px;
+}
+button {
+  background-color:#44c767;
+  cursor:pointer;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 10px;
+  margin: auto;
+  background: inherit;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+    justify-content: center;
+  align-content: center;
+  border-radius: 40px;
+  float:right;
+}
+button:hover{
+  color: black;
+}
+
+
+
+.glass-bg{
+	width: 70%;
+	height: 60px;
+	margin: 80px auto 80px auto;
+	background: inherit;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	display: flex;
+    justify-content: center;
+	align-content: center;
+	border-radius: 40px;
+}
+.glass-bg h1{
+	font-family: 'Homemade Apple', cursive;
+	color: rgba(255, 255, 255, 1);
+	font-size: 1em;
+    padding: 10px;
+	position:absolute;
+	display: flex; 
+	align-self: center; 
+	justify-self: center;
+}
+
+.imessage {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+  margin: 0 auto 5% auto;
+  max-width: 600px;
+  padding: 0.5rem 1.5rem;
+}
+
+.imessage p {
+  border-radius: 1.15rem;
+  line-height: 1.25;
+  max-width: 75%;
+  padding: 0.5rem .875rem;
+  position: relative;
+  word-wrap: break-word;
+  -webkit-animation: floatBubble 0s  normal ease-out;
+  animation: floatBubble 0s  normal ease-out;
+  animation-fill-mode: both;
+  animation-delay: var(--delay);
+}
+
+.imessage img {
+  border-radius: 1.15rem;
+  line-height: 1.25;
+  max-width: 75%;
+  padding: 0.5rem;
+  position: relative;
+  word-wrap: break-word;
+  -webkit-animation: floatBubble 0s  normal ease-out;
+  animation: floatBubble 0s  normal ease-out;
+  animation-fill-mode: both;
+  animation-delay: var(--delay);
+}
+
+img.from-them {
+  align-items: flex-start;
+  background-color: #e5e5ea;
+  color: #000;
+}
+
+.imessage img { 
+  opacity: 0.7; 
+} 
+
+.imessage img:hover { 
+  opacity: 1; 
+}
+
+p.from-me {
+  align-self: flex-end;
+  background-color: #248bf5;
+  color: #fff;
+}
+
+p[class^="from-"] {
+  margin: 0.5rem 0 0 0;
+  width: fit-content;
+}
+
+
+p.from-them {
+  align-items: flex-start;
+  background-color: #e5e5ea;
+  color: #000;
+}
+
+p.from-me + p.from-me {
+  margin: 0.25rem 0 0 0;
+}
+p.from-me + p.from-them {
+  margin: 1.25rem 0 0 0;
+}
+p.from-them + p.from-them {
+  margin: 0.25rem 0 0 0;
+}
+p.from-them + p.from-me {
+  margin: 1.25rem 0 0 0;
+}
+
+p[class^="from-"].emoji {
+  background: none;
+  font-size: 2.5rem;
+}
+
+@-webkit-keyframes floatBubble {
+    0% {
+        top:500px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+    }
+}
+@keyframes floatBubble {
+    0% {
+        top:100%;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+    }
+
+}
